@@ -30,6 +30,9 @@
 		81A879B82A6BC48D005CA72A /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A879B72A6BC48D005CA72A /* LoginViewViewModel.swift */; };
 		81A879BA2A6BC4A1005CA72A /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A879B92A6BC4A1005CA72A /* RegisterViewViewModel.swift */; };
 		81A879BC2A6BC4C6005CA72A /* ToDoListItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A879BB2A6BC4C6005CA72A /* ToDoListItemViewViewModel.swift */; };
+		81A879BE2A6BD2D1005CA72A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A879BD2A6BD2D1005CA72A /* HeaderView.swift */; };
+		81A879C02A6BFAD1005CA72A /* CTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A879BF2A6BFAD1005CA72A /* CTButton.swift */; };
+		81A879C22A6C154C005CA72A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A879C12A6C154C005CA72A /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		81A879B72A6BC48D005CA72A /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
 		81A879B92A6BC4A1005CA72A /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
 		81A879BB2A6BC4C6005CA72A /* ToDoListItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewViewModel.swift; sourceTree = "<group>"; };
+		81A879BD2A6BD2D1005CA72A /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		81A879BF2A6BFAD1005CA72A /* CTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTButton.swift; sourceTree = "<group>"; };
+		81A879C12A6C154C005CA72A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,8 @@
 				81A879A52A6BC2F4005CA72A /* LoginView.swift */,
 				81A879A72A6BC309005CA72A /* RegisterView.swift */,
 				81A879A92A6BC36B005CA72A /* ToDoListItemView.swift */,
+				81A879BD2A6BD2D1005CA72A /* HeaderView.swift */,
+				81A879BF2A6BFAD1005CA72A /* CTButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 				813F4AC22A69CFF900214A41 /* Assets.xcassets */,
 				813F4ABE2A69CFF500214A41 /* CleaningTimeApp.swift */,
 				81A8799E2A6BC099005CA72A /* GoogleService-Info.plist */,
+				81A879C12A6C154C005CA72A /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -235,8 +244,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				81A879A62A6BC2F4005CA72A /* LoginView.swift in Sources */,
+				81A879BE2A6BD2D1005CA72A /* HeaderView.swift in Sources */,
 				813F4AC12A69CFF500214A41 /* MainView.swift in Sources */,
 				81A879BA2A6BC4A1005CA72A /* RegisterViewViewModel.swift in Sources */,
+				81A879C02A6BFAD1005CA72A /* CTButton.swift in Sources */,
 				81A879B02A6BC423005CA72A /* MainViewViewModel.swift in Sources */,
 				81A879A22A6BC2CC005CA72A /* ToDoListView.swift in Sources */,
 				81A879A82A6BC309005CA72A /* RegisterView.swift in Sources */,
@@ -247,6 +258,7 @@
 				81A879B42A6BC45A005CA72A /* ToDoListViewViewModel.swift in Sources */,
 				81A879B82A6BC48D005CA72A /* LoginViewViewModel.swift in Sources */,
 				813F4ABF2A69CFF500214A41 /* CleaningTimeApp.swift in Sources */,
+				81A879C22A6C154C005CA72A /* Extensions.swift in Sources */,
 				81A879AE2A6BC3CA005CA72A /* ToDoListItem.swift in Sources */,
 				81A879A42A6BC2E7005CA72A /* NewItemView.swift in Sources */,
 				81A879B62A6BC471005CA72A /* NewItemViewViewModel.swift in Sources */,
