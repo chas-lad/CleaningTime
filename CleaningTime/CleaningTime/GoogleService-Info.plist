@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>454808228507-mqf32qhov6ef0bqeihplo5le89p9jk7q.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.454808228507-mqf32qhov6ef0bqeihplo5le89p9jk7q</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCXG-vChdvMRDufgcxx-4CxW2DR17yFnrU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>454808228507</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ladhar.CleaningTime</string>
+	<key>PROJECT_ID</key>
+	<string>cleaningtime-d7394</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cleaningtime-d7394.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:454808228507:ios:8f1311926e8bc7f1aaac3e</string>
+</dict>
+</plist>
