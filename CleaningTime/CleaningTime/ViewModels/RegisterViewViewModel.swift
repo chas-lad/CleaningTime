@@ -36,7 +36,8 @@ class RegisterViewViewModel: ObservableObject {
         let newUser = User(id: id,
                            name: name,
                            email: email,
-                           joined: Date().timeIntervalSince1970)
+                           joined: Date().timeIntervalSince1970,
+                           completed: false)
         
         let db = Firestore.firestore()
         
@@ -46,7 +47,6 @@ class RegisterViewViewModel: ObservableObject {
     }
     
     
-    
     private  func validate() -> Bool {
         guard !name.trimmingCharacters(in: .whitespaces).isEmpty,
               !name.trimmingCharacters(in: .whitespaces).isEmpty,
@@ -54,7 +54,6 @@ class RegisterViewViewModel: ObservableObject {
             return false
         }
         
-        // TODO Add more rigourous validation
         guard email.contains("@") && email.contains(".") else {
             return false
         }
