@@ -38,10 +38,6 @@ struct MainView: View {
                     .tabItem{
                         Label("Assignment", systemImage: "person.fill.questionmark")
                     }
-                HistoryView()
-                    .tabItem{
-                        Label("History", systemImage: "folder.badge.questionmark")
-                    }
             }
         }
     }

@@ -17,7 +17,6 @@ class ToDoListViewViewModel: ObservableObject{
     @Published var user: User? = nil
     @Published var weekday = Date().formatted(.dateTime.weekday(.wide))
     
-    
     init() {
         
         guard let userId = Auth.auth().currentUser?.uid else {
