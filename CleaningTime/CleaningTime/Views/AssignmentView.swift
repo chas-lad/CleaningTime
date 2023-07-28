@@ -12,7 +12,8 @@ struct AssignmentView: View {
     
     @StateObject var viewModel = AssignmentViewViewModel()
     @FirestoreQuery var users: [User]
-    
+    var weekdays: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
     init(){
         self._users = FirestoreQuery(collectionPath: "users")
     }
@@ -35,11 +36,11 @@ struct AssignmentView: View {
                         }
                     }
                     
-                    //                    Picker("Pick a day", selection: $viewModel.selectedDay){
-                    //                        ForEach(users, id: \.id) { user in
-                    //                            Text(user.name)
-                    //                        }
-                    //                    }
+                    Picker("Pick a day to assign", selection: $viewModel.selectedDay){
+                        ForEach(weekdays, id: \.self) { day in
+                            Text(day)
+                        }
+                    }
                     CTButton(title: "Save", background: .teal) {
                         viewModel.save()
                     }

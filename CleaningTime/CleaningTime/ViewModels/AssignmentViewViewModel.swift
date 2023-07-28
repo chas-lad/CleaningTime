@@ -10,12 +10,14 @@ import Foundation
 class AssignmentViewViewModel: ObservableObject {
     
     @Published var selectedUserId: String = ""
-    @Published var selectedDayIndex: String = ""
+    @Published var selectedDay: String = "Monday"
     
-    init(){}
+    init(){
+    
+    }
     
     func save() {
         print(selectedUserId)
-        print(selectedDayIndex)
+        print(selectedDay)
     }
 }
