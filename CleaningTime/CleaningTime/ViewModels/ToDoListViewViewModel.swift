@@ -14,14 +14,34 @@ import Foundation
 class ToDoListViewViewModel: ObservableObject{
     
     @Published var showingNewItemView = false
-    @Published var userId = ""
+    @Published var user: User? = nil
+    @Published var weekday = Date().formatted(.dateTime.weekday(.wide))
+    
     
     init() {
         
-        guard let ID = Auth.auth().currentUser?.uid else {
+        guard let userId = Auth.auth().currentUser?.uid else {
             return
         }
-        userId = ID
+        
+        let db = Firestore.firestore()
+        // fetch data from db concerning the current user/userId
+        db.collection("users").document(userId).getDocument { [weak self] snapshot, error in
+            guard let data = snapshot?.data(), error == nil else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self?.user = User(
+                    id: data["id"] as? String ?? "",
+                    name: data["name"] as? String ?? "",
+                    email: data["email"] as? String ?? "",
+                    joined: data["joined"] as? TimeInterval ?? 0,
+                    completed: data["completed"] as? Bool ?? false,
+                    day: data["day"] as? String ?? ""
+                )
+            }
+        }
     }
     
     

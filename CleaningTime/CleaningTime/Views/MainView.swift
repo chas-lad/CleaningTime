@@ -32,6 +32,17 @@ struct MainView: View {
                 .tabItem{
                     Label("Profile", systemImage: "person.circle")
                 }
+            if viewModel.currentUserId == "mprG8UewspMZ2tYvsc43WrHp1NU2"
+            {
+                AssignmentView()
+                    .tabItem{
+                        Label("Assignment", systemImage: "person.fill.questionmark")
+                    }
+                HistoryView()
+                    .tabItem{
+                        Label("History", systemImage: "folder.badge.questionmark")
+                    }
+            }
         }
     }
 }

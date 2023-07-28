@@ -18,37 +18,50 @@ struct ToDoListView: View {
     }
     
     var body: some View {
-        NavigationView {
-            VStack {
-                List(items) { item in
-                    ToDoListItemView(item: item)
-                        .swipeActions{
-                            if viewModel.userId == "mprG8UewspMZ2tYvsc43WrHp1NU2"
-                            {
-                                Button("Delete"){
-                                    viewModel.delete(id: item.id)
+        
+        if let user = viewModel.user {
+            if viewModel.weekday == user.day {
+                NavigationView {
+                    VStack {
+                        List(items) { item in
+                            ToDoListItemView(item: item)
+                                .swipeActions{
+                                    if user.id == "mprG8UewspMZ2tYvsc43WrHp1NU2"
+                                    {
+                                        Button("Delete"){
+                                            viewModel.delete(id: item.id)
+                                        }
+                                        .tint(.red)
+                                    }
                                 }
-                                .tint(.red)
+                        }
+                        .listStyle(PlainListStyle())
+                    }
+                    .navigationTitle("Cleaning List")
+                    .toolbar{
+                        
+                        if user.id == "mprG8UewspMZ2tYvsc43WrHp1NU2"
+                        {
+                            Button{
+                                viewModel.showingNewItemView = true
+                            }
+                            label : {
+                                Image(systemName: "plus")
                             }
                         }
-                }
-                .listStyle(PlainListStyle())
-            }
-            .navigationTitle("Cleaning List")
-            .toolbar{
-                if viewModel.userId == "mprG8UewspMZ2tYvsc43WrHp1NU2"
-                {
-                    Button{
-                        viewModel.showingNewItemView = true
+                        
                     }
-                    label : {
-                        Image(systemName: "plus")
+                    // .sheet method is used to prevent a modal view when a boolean value is true
+                    .sheet(isPresented: $viewModel.showingNewItemView) {
+                        NewItemView(newItemPresented: $viewModel.showingNewItemView)
                     }
                 }
             }
-            // .sheet method is used to prevent a modal view when a boolean value is true
-            .sheet(isPresented: $viewModel.showingNewItemView) {
-                NewItemView(newItemPresented: $viewModel.showingNewItemView)
+            else{
+                Text("Today is not your day to clean! Or you haven't been assigned a day! Ask your admin (Chas) to delegate a day to you.")
+                    .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 300)
             }
         }
     }

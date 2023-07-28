@@ -51,8 +51,9 @@ struct ProfileView: View {
                 }
                 .padding()
                 HStack {
-                    Text("Member Since: ")
+                    Text("Day Assigned: ")
                         .bold()
+                    Text(user.day)
                     
                 }
                 .padding()

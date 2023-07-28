@@ -33,11 +33,13 @@ class RegisterViewViewModel: ObservableObject {
     private func insertUserRecord(id: String){
         // note firebase authentcation has it's own database for authentcation purposes which stores minimal data (email and password)
         // we need to create our own "users" collection in our own firestore database in order to add any additional arbitrary data etc.
+        // by default I will assign the user with a day of the week of Monday
         let newUser = User(id: id,
                            name: name,
                            email: email,
                            joined: Date().timeIntervalSince1970,
-                           completed: false)
+                           completed: false,
+                           day: "Monday")
         
         let db = Firestore.firestore()
         
