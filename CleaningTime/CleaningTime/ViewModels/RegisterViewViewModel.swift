@@ -45,6 +45,8 @@ class RegisterViewViewModel: ObservableObject {
             .setData(newUser.asDictionary())
     }
     
+    
+    
     private  func validate() -> Bool {
         guard !name.trimmingCharacters(in: .whitespaces).isEmpty,
               !name.trimmingCharacters(in: .whitespaces).isEmpty,
@@ -52,6 +54,7 @@ class RegisterViewViewModel: ObservableObject {
             return false
         }
         
+        // TODO Add more rigourous validation
         guard email.contains("@") && email.contains(".") else {
             return false
         }

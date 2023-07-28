@@ -9,6 +9,7 @@ import Foundation
 
 
 // Extensions add additional functionality to an existing class, struct,, enum or protocol. (Kind of like @Override in Java)
+// This particular extension is useful to add to our models to help convert to JSON string
 extension Encodable {
     func asDictionary() -> [String: Any] {
         guard let data = try? JSONEncoder().encode(self) else {
