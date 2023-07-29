@@ -29,14 +29,19 @@ struct AssignmentView: View {
                     }
                 }
                 Form {
-                    
+                    if !viewModel.errorMessage.isEmpty {
+                        Text(viewModel.errorMessage)
+                            .foregroundColor(Color.red)
+                    }
                     Picker("Pick a user", selection: $viewModel.selectedUserId){
+                        Text("No Option").tag(Optional<String>(nil))
                         ForEach(users, id: \.id) { user in
                             Text(user.name)
                         }
                     }
                     
                     Picker("Pick a day to assign", selection: $viewModel.selectedDay){
+                        Text("No Option").tag(Optional<String>(nil))
                         ForEach(weekdays, id: \.self) { day in
                             Text(day)
                         }
