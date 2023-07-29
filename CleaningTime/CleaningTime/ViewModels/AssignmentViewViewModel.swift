@@ -19,8 +19,6 @@ class AssignmentViewViewModel: ObservableObject {
     }
     
     func save() {
-        print(selectedUserId)
-        print(selectedDay)
         
         guard validate() else {
             errorMessage = "Select a user and day"
@@ -37,7 +35,7 @@ class AssignmentViewViewModel: ObservableObject {
                 }
     }
     
-    private  func validate() -> Bool {
+    private func validate() -> Bool {
         errorMessage = ""
         
         guard selectedUserId != "" else {
