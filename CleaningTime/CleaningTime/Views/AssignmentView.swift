@@ -17,17 +17,19 @@ struct AssignmentView: View {
     init(){
         self._users = FirestoreQuery(collectionPath: "users")
     }
-    
+
     var body: some View {
         NavigationView {
             VStack {
+                Spacer()
                 List(users, id: \.id) { user in
                     HStack {
                         Text(user.name)
                         Text(user.day)
-                        user.completed ? Text("Yes") : Text("No")
+                        user.completed ? Text("Complete") : Text("Incomplete")
                     }
                 }
+        
                 Form {
                     if !viewModel.errorMessage.isEmpty {
                         Text(viewModel.errorMessage)
