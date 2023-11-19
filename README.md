@@ -9,3 +9,15 @@ Two scheduled google cloud functions are running for this app:
 - Every day at 12AM to set the 'isDone' key for each document in the "todos" collection to false
 
 Happy cleaning!
+
+![alt text](./Images/loading.png)
+
+![alt text](./Images/login.png)
+
+![alt text](./Images/cleaningList.png)
+
+![alt text](./Images/newItem.png)
+
+![alt text](./Images/profile.png)
+
+![alt text](./Images/assignments.png)
