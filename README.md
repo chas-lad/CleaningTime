@@ -10,14 +10,14 @@ Two scheduled google cloud functions are running for this app:
 
 Happy cleaning!
 
-![alt text](./Images/loading.png)
+<img src="./Images/loading.png" width=25% height=25%>
 
-![alt text](./Images/login.png)
+<img src="./Images/login.png" width=25% height=50%>
 
-![alt text](./Images/cleaningList.png)
+<img src="./Images/cleaningList.png" width=25% height=25%>
 
-![alt text](./Images/newItem.png)
+<img src="./Images/newItem.png" width=25% height=25%>
 
-![alt text](./Images/profile.png)
+<img src="./Images/profile.png" width=25% height=25%>
 
-![alt text](./Images/assignments.png)
+<img src="./Images/assignments.png" width=25% height=25%>
